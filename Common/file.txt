@@ -1,0 +1,62 @@
+Error Handling (What it is)
+Error handling is the process of detecting, managing, 
+and responding to errors in an application so it doesn’t crash and gives meaningful output.
+Types of Errors
+1. Syntax Error
+Occurs when code is written incorrectly
+Detected at compile/parse time
+
+Example:
+console.log("Hello
+2. Runtime Error
+Occurs during execution
+Code is syntactically correct but fails while running
+
+Example:
+let x = undefined;
+console.log(x.name);
+3. Logical Error
+Code runs but gives wrong output
+Hard to detect
+
+Example:
+
+// Wrong logic
+let total = price - discount; 
+Error Handling in JavaScript
+try...catch
+
+Used to handle runtime errors
+
+try {
+  let data = JSON.parse("invalid");
+} catch (err) {
+  console.log("Error:", err.message);
+} finally {
+  console.log("Done");
+}
+throw
+
+Used to create custom errors
+
+if (age < 18) {
+  throw new Error("Not eligible");
+}
+Async Error Handling
+
+Using async/await:
+
+try {
+  const res = await fetch(url);
+} catch (err) {
+  console.log(err);
+}
+Types of Error Handling (Design Level)
+Synchronous error handling (try-catch)
+Asynchronous error handling (promises, async/await)
+Global error handling (middleware in backend like Express)
+Custom error handling (user-defined errors)
+One-line Interview Answer
+
+“Error handling is a mechanism to manage runtime issues in an application using techniques
+like try-catch, and errors are mainly of three types: syntax, runtime, and logical.”
