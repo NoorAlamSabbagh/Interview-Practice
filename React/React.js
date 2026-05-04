@@ -30,7 +30,10 @@
 // <==================📌 4️⃣ What are React Hooks? ==================>
 // React Hooks are functions that allow developers to use state and other 
 // React features in functional components. They were introduced in React 16.8
-//  to provide a way to manage state and side effects without needing to write class components. Some common hooks include useState for managing state, useEffect for handling side effects, and useContext for accessing context values. Hooks enable developers to write cleaner and more reusable code while maintaining the benefits of functional programming.
+// to provide a way to manage state and side effects without needing to write class components. 
+// Some common hooks include useState for managing state, useEffect for handling side effects, and
+// useContext for accessing context values. Hooks enable developers to write cleaner and more reusable 
+// code while maintaining the benefits of functional programming.
 
 // <==================📌 5️⃣ What is the difference between state and props in React? ==================>
 // State and props are two fundamental concepts in React that serve different purposes:
