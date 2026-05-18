@@ -320,7 +320,18 @@
 // 6. every: Tests whether all elements in the array pass the test implemented by a function.
 // 7. includes: Determines whether an array includes a certain value, returning true or false.
 // 8. slice: Returns a shallow copy of a portion of an array into a new array.
-// 9. splice: Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+example:
+const arr = [1, 2, 3, 4, 5];
+console.log(arr.slice(1, 4)); // Output: [2, 3, 4]
+// 9. splice: Changes the contents of an array by removing or replacing existing
+//  elements and/or adding new elements in place.
+example:
+const arr = [1, 2, 3, 4, 5];
+arr.splice(2, 1, 6); // Output: [1, 2, 6, 4, 5]
+example:
+const arr = [1, 2, 3, 4, 5];
+arr.splice(2, 0, 6); // Output: [1, 2, 6, 3, 4, 5]
+
 // 10. for loop: A traditional loop that iterates over a block of code a specified number of times.
 // 11. forEach: Executes a provided function once for each array element.
 // Overall, these methods and loops are essential for manipulating and iterating over arrays in JavaScript,
@@ -328,9 +339,26 @@
 //How to rememeber all these methods and loops?
 // You can remember these methods and loops by associating them with their specific use cases and functionalities. 
 // For example, you can think of map as a way to transform data, filter as a way to select specific elements, 
-// reduce as a way to aggregate values, find as a way to search for an element, some and every as ways to test conditions, 
+// reduce as a way to aggregate values, find as a way to search for an element, some and every as ways 
+// to test conditions, 
 // includes as a way to check for the presence of a value, slice and splice as ways to manipulate arrays, 
 // and for loops and forEach as ways to iterate over collections. Creating mental associations and practicing using 
 // these methods in real coding scenarios can help reinforce your memory of them.
 
+//<==================📌 2️⃣3️⃣ Call vs Apply vs Bind ==================>
+// Call, Apply, and Bind are methods in JavaScript that allow you to control the context (this) of a function.
+// 1. call: The call method calls a function with a given this value and arguments provided individually.
+// Example:
+function greet() {
+  console.log(`Hello, ${this.name}!`);
+}       
+const person = { name: "Alice" };
+greet.call(person); // Output: Hello, Alice!
+// 2. apply: The apply method is similar to call, but it takes arguments as an array.
+greet.apply(person); // Output: Hello, Alice!
+// 3. bind: The bind method creates a new function that, when called, has its this keyword set to the provided value.
+const boundGreet = greet.bind(person);
+boundGreet(); // Output: Hello, Alice!
+// Overall, call and apply are used to invoke functions with a specific context immediately, 
+// while bind is used to create a new function with a specific context that can be called later.
 

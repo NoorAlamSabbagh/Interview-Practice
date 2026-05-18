@@ -64,8 +64,8 @@
 // It allows developers to perform actions such as data fetching, subscriptions, 
 // or manually changing the DOM after a component has rendered. 
 // The useEffect hook takes a function as its first argument,
-//  which will be executed after the component renders. It also accepts an optional second argument,
-//  which is an array of dependencies that determines when the effect should be re-run. 
+// which will be executed after the component renders. It also accepts an optional second argument,
+// which is an array of dependencies that determines when the effect should be re-run. 
 // If the dependencies change, the effect will be executed again. 
 // This makes useEffect a powerful tool for managing side effects and ensuring that components 
 // behave correctly in response to changes in state or props.
@@ -92,7 +92,7 @@
 // The useRef hook in React is used to create a mutable reference that persists across renders.
 //  It allows developers to access and manipulate DOM elements directly or store any mutable value
 //  that does not trigger a re-render when updated. The useRef hook returns an 
-// object with a current property that can be assigned to a DOM element or used to store any value.
+//  object with a current property that can be assigned to a DOM element or used to store any value.
 //  This makes it useful for tasks such as managing focus, measuring the size of an element, or
 //  keeping track of previous values without causing unnecessary re-renders.
 
@@ -122,8 +122,8 @@
 
 // <==================📌 1️⃣4️⃣ What is the purpose of the useImperativeHandle hook in React? ==================>
 // The useImperativeHandle hook in React is used to customize the instance value that is exposed to parent
-//  components when using the forwardRef API. It allows developers to specify which properties and methods
-//  should be accessible to the parent component when it holds a reference to a child component. 
+// components when using the forwardRef API. It allows developers to specify which properties and methods
+// should be accessible to the parent component when it holds a reference to a child component. 
 // The useImperativeHandle hook takes a ref object and a function that returns an object containing the properties 
 // and methods to be exposed. This is particularly useful for managing focus, triggering animations, 
 // or providing an imperative API for child components while still maintaining the benefits of functional 
