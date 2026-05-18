@@ -142,3 +142,68 @@
 // However, developers need to be mindful of memory leaks, which can occur when memory that is no longer needed 
 // is not released.
 
+//<=========================📌 2️⃣1️⃣ Single thread vs multithreading========================================>
+// Single-threading: In a single-threaded environment, only one thread of execution is available to process tasks.
+// This means that tasks are executed sequentially, and if one task takes a long time to complete,
+// it can block the execution of other tasks.
+// Multithreading: In a multithreaded environment, 
+// multiple threads of execution are available to process tasks concurrently.
+// This allows for better performance and responsiveness,
+// as tasks can be executed in parallel without blocking each other. 
+// However, multithreading can also introduce complexities such as race conditions 
+// and synchronization issues that need to be carefully managed.
+
+// <==================📌 2️⃣2️⃣ Callback Queue ==================>
+// The callback queue is a data structure used in JavaScript to manage the execution of callback functions.
+// When an asynchronous operation is initiated, the associated callback function is added to the callback queue.
+// The event loop continuously checks the callback queue and executes the callbacks in the order they were added,
+// ensuring that they are executed after the current call stack is empty. 
+// This allows JavaScript to handle asynchronous operations efficiently without blocking 
+// the main thread of execution.
+
+// <==================📌 2️⃣3️⃣ Microtask queue ==================>
+// The microtask queue is a data structure used in JavaScript to manage the execution of microtasks, 
+// which are a type of callback function that is executed after the current task and before 
+// the next task in the event loop.
+// Microtasks are typically used for operations that need to be executed immediately after the current task, 
+// such as promise callbacks and process.nextTick() callbacks in Node.js.
+// The microtask queue is processed after the current task is completed and before the next task is executed,
+// ensuring that microtasks are given priority over regular tasks in the event loop. 
+// This allows for efficient handling of asynchronous operations and helps maintain a 
+// responsive user experience in JavaScript applications.
+
+// <==================📌 2️⃣4️⃣ Non-blocking I/O ==================>
+// Non-blocking I/O is a programming paradigm that allows for the execution of input/output operations 
+// without blocking the main thread of execution.
+// In a non-blocking I/O model, when an I/O operation is initiated, 
+// the program can continue executing other tasks while waiting for the I/O operation to complete.
+// This is achieved through the use of callbacks, promises, or async/await syntax, 
+// which allows developers to handle the results of asynchronous operations without blocking the main thread.
+// Non-blocking I/O is particularly beneficial in scenarios where there are multiple 
+// concurrent connections or when dealing with real-time applications,
+// as it allows for improved performance and responsiveness. 
+
+// <==================📌 2️⃣5️⃣ setTimeout, setImmediate, process.nextTick ==================>
+// `setTimeout` is a function that schedules a callback to be executed after a specified delay in milliseconds.
+// `setImmediate` is a function that schedules a callback to be executed immediately after 
+// the current event loop phase.
+// `process.nextTick` is a function that schedules a callback to be executed on the next 
+// iteration of the event loop, before any I/O events are processed.
+// The main difference between these functions is the timing of when the 
+// callbacks are executed in relation to the event loop and I/O operations. 
+// `setTimeout` is used for scheduling tasks with a delay, while `setImmediate` and 
+// `process.nextTick` are used for scheduling tasks to be executed as soon as possible, with 
+// `process.nextTick` having higher priority than `setImmediate`.
+
+// <==================📌 2️⃣6️⃣ Streams vs Buffers ==================>
+// Streams and buffers are both used for handling data in Node.js, but they serve different purposes.
+// A buffer is a temporary storage area for binary data. It is used to hold data that is 
+// being read from or written to a stream.
+// A stream, on the other hand, is an abstract interface for working with streaming data. 
+// It allows for reading and writing data in chunks, rather than all at once.
+// Streams are particularly useful for handling large amounts of data, as they allow for efficient 
+// processing without consuming excessive memory.
+// Buffers are often used in conjunction with streams to temporarily store data before it 
+// is processed or sent over the network. 
+// Overall, while buffers are used for temporary storage of binary data, streams provide a
+//  more efficient way to handle and process large amounts of data in Node.js applications.

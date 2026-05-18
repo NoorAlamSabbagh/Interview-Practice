@@ -3,6 +3,8 @@
 // The Event Loop is a mechanism that allows JavaScript to handle asynchronous operations
 // while remaining single-threaded.
 
+const e = require("express");
+
 // How it works (flow)
 // 1. Call Stack executes synchronous code
 // 2. Async tasks (setTimeout, API calls, promises) go to Web APIs
@@ -361,4 +363,128 @@ const boundGreet = greet.bind(person);
 boundGreet(); // Output: Hello, Alice!
 // Overall, call and apply are used to invoke functions with a specific context immediately, 
 // while bind is used to create a new function with a specific context that can be called later.
+
+
+//<==================📌 2️⃣4️⃣ Var vs Let vs Const ==================>
+// Var, let, and const are three ways to declare variables in JavaScript, each with different characteristics.
+// 1. var: The var keyword is function-scoped and can be redeclared and updated. It is hoisted to the top of its scope, meaning it can be used before it is declared, but it will be initialized with undefined.
+// Example:
+console.log(x); // Output: undefined
+var x = 5;
+
+// 2. let: The let keyword is block-scoped and can be updated but not 
+// redeclared within the same scope. It is also hoisted, but it is not initialized 
+// until its declaration is evaluated,
+// resulting in a ReferenceError if accessed before declaration.
+// Example:
+console.log(y);
+// Output: ReferenceError: Cannot access 'y' before initialization
+let y = 10;
+// 3. const: The const keyword is block-scoped and cannot be updated or redeclared.
+//  It must be initialized at the time of declaration, 
+// and its value cannot be changed afterward.
+// Example:
+const z = 15;
+z = 20; // Output: TypeError: Assignment to constant variable.
+// Overall, var is function-scoped and can lead to issues with hoisting and 
+// redeclaration, while let and const provide block scope and help prevent common
+//  pitfalls in variable declaration and assignment. Let allows for reassignment, 
+// while const ensures that the variable cannot be reassigned after its initial declaration.
+
+//<==================📌 2️⃣5️⃣ Callback Hell ==================>
+// Callback hell, also known as "Pyramid of Doom," is a situation in JavaScript where
+// multiple nested callbacks are used, leading to code that is difficult to read and maintain.
+// It occurs when you have a series of asynchronous operations that depend on each other,
+// and each operation is implemented using a callback function.
+//  As the number of nested callbacks increases,
+// the code becomes more complex and harder to understand, 
+// making it difficult to debug and maintain.
+// To avoid callback hell, developers can use Promises or async/await syntax,
+//  which provide a more structured and readable way to handle asynchronous operations.
+// Promises allow you to chain asynchronous operations together, while async/await allows 
+// you to write asynchronous code that looks synchronous, improving readability and 
+// maintainability.
+// Overall, avoiding callback hell is crucial for writing clean and efficient JavaScript
+//  code when dealing with asynchronous operations.
+
+//<==================📌 2️⃣6️⃣ Polyfill ==================>
+// A polyfill is a piece of code (usually JavaScript) that implements a feature on web browsers that do not natively support it.
+// Polyfills are used to provide backward compatibility for older browsers,allowing developers to use
+//  modern features without worrying about browser support.
+// For example, if a new JavaScript feature is introduced in ES6, but some users are still using older browsers that do not support it, 
+// a polyfill can be created to mimic the behavior of that feature.
+// Polyfills can be included in a project by adding a script tag that points to the polyfill code or by using a package manager 
+// like npm to install and import the polyfill in your JavaScript files.
+// Overall, polyfills play a crucial role in ensuring that web applications can function properly across different browsers and versions, 
+// providing a better user experience for all users.
+
+//<==================📌 2️⃣7️⃣ Closures and Currying ==================>
+// Closures and currying are two important concepts in JavaScript that are often asked in interviews.
+// Closures: A closure is a function that has access to its own scope, the outer function's scope, and the global scope. 
+// It allows a function to access variables from an enclosing scope even after it has returned. 
+// Currying: Currying is a functional programming technique where a function with multiple arguments is transformed into a 
+// sequence of functions that each take a single argument.
+// example of closures:
+// function outerFunction() {
+//     let outerVariable = "I am from the outer function";
+//     // This inner function forms a closure
+//     function innerFunction() {
+//         console.log(outerVariable);
+//     }
+//     return innerFunction;
+// }
+// const closureExample = outerFunction();
+// closureExample(); // Output: I am from the outer function
+
+//example of currying:
+// function add(a) {
+//     return function(b) {
+//         return a + b;
+//     }
+// }
+// const add5 = add(5);
+// console.log(add5(3)); // Output: 8
+// console.log(add5(10)); // Output: 15
+// Both closures and currying are powerful tools for creating reusable and modular code in JavaScript, and understanding them is essential for writing efficient and maintainable code.
+
+//<==================📌 2️⃣8️⃣ Debouncing and Throttling ==================>
+// Debouncing and throttling are techniques used to control the rate at which a function is executed, especially in response to events like scrolling, resizing, or user input.
+// Debouncing: Debouncing ensures that a function is only called after a certain amount of time has passed since the last time it was invoked.
+// This is useful for preventing a function from being called too frequently, such as when a user is typing in a search box or resizing a window.
+
+// Throttling: Throttling ensures that a function is only called once in a specified time interval, regardless of how many times it is triggered.
+// This is useful for limiting the number of times a function is called, such as when a user is scrolling through a page or clicking a button rapidly.
+// Both debouncing and throttling can improve performance and user experience by reducing the number of unnecessary function calls, especially in scenarios where events are triggered frequently.  
+
+//<==================📌 2️⃣9️⃣ Prototypes ==================>
+// Prototypes in JavaScript are a fundamental concept that allows objects to inherit properties and methods from other objects.
+// Every JavaScript object has a prototype, which is another object that it inherits from.
+// When you try to access a property or method on an object, JavaScript first looks for it on the object itself.
+// If it doesn't find it there, it looks up the prototype chain until it finds the property or method or reaches the end of the chain.
+// This allows for a flexible and dynamic way to share functionality between objects without the need for classes,
+// making JavaScript a powerful and versatile language for object-oriented programming.
+// Prototypes can be used to create new objects that inherit from existing ones, allowing for code reuse and the creation of complex object hierarchies.
+// Overall, understanding prototypes is essential for working with objects in JavaScript and leveraging the language's powerful inheritance capabilities.
+
+//<==================📌 3️⃣0️⃣ Arrow Functions ==================>
+// Arrow functions are a concise syntax for writing functions in JavaScript. They were introduced in ES6 and provide a more compact way to define functions.
+// Arrow functions have several key features:
+// 1. They do not have their own this context; instead, they inherit this from the surrounding scope.
+// 2. They cannot be used as constructors and do not have a prototype property.
+// 3. They have an implicit return when the function body is a single expression, allowing for more concise code.
+// Example of an arrow function:
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // Output: 5
+// Arrow functions are particularly useful for writing short, one-line functions and for maintaining the correct this context in callbacks and event handlers. 
+// However, they may not be suitable for all use cases, such as when you need a function that can be used as a constructor or when you require a function with its own this context. 
+// Overall, arrow functions are a powerful tool for writing cleaner and more concise JavaScript code.
+
+//<==================📌 3️⃣1️⃣ This Keyword ==================>
+// The this keyword in JavaScript refers to the context in which a function is executed.
+// It can have different values depending on how a function is called.
+// 1. In a regular function, this refers to the global object (window in browsers) or undefined in strict mode. 
+// 2. In a method (a function that is a property of an object), this refers to the object that the method is called on.
+// 3. In a constructor function, this refers to the newly created object.
+// 4. In an arrow function, this is lexically bound and refers to the surrounding scope's this value.
+// Understanding the this keyword is crucial for writing effective JavaScript code, as it allows you to access and manipulate the context of function execution, enabling you to create more dynamic and flexible applications.
 

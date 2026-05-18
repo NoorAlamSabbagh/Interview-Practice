@@ -1,0 +1,57 @@
+//<================ 📌1️⃣ EC2 ==================>
+// EC2 (Elastic Compute Cloud) is a web service provided by Amazon Web Services (AWS)
+// that allows users to rent virtual servers, known as instances, to run applications
+// and services in the cloud. EC2 provides scalable computing capacity, allowing users to
+// quickly and easily deploy and manage applications without the need for physical hardware.
+//  Users can choose from a variety of instance types, each optimized for different use cases,
+//  such as compute-intensive tasks, memory-intensive tasks, or storage-intensive tasks.
+//  EC2 also offers features such as auto-scaling, load balancing, and security groups to help
+//  users manage their instances effectively. Overall, EC2 is a powerful and flexible service
+// that enables users to leverage the benefits of cloud computing for their applications and
+// services.
+
+//<================== 📌 2️⃣ S3 (Simple Storage Service) ==================
+// S3 (Simple Storage Service) is a cloud storage service provided by Amazon Web Services (AWS) that allows users to store and retrieve data in the cloud. S3 provides a simple web interface for storing and retrieving any amount of data, at any time, from anywhere on the web. It is designed to be highly scalable, durable, and secure, making it an ideal solution for storing and managing large amounts of data. S3 can be used for a variety of use cases, such as backup and restore, archiving, content distribution, and data lakes. It also integrates with other AWS services, such as EC2 and Lambda, to provide a seamless experience for building and deploying applications in the cloud.
+
+//<================== 📌 3️⃣ Lambda ==================>
+// Lambda is a serverless compute service provided by Amazon Web Services (AWS) that allows users to run code without provisioning or managing servers. With Lambda, users can write and deploy code in response to events, such as changes to data in an S3 bucket, updates to a DynamoDB table, or HTTP requests through API Gateway. Lambda automatically scales the compute resources needed to run the code, and users only pay for the compute time consumed by their code. This makes Lambda an efficient and cost-effective solution for running event-driven applications and microservices in the cloud.
+
+//<================== 📌 4️⃣ API Gateway ==================>
+// API Gateway is a fully managed service provided by Amazon Web Services (AWS) that allows
+// developers to create, publish, maintain, monitor, and secure APIs at any scale.
+// It acts as a front door for applications to access data, business logic, or functionality
+// from backend services. API Gateway provides features such as request and response
+//  transformation, caching, throttling, and authentication and authorization mechanisms to
+//  help developers build robust and secure APIs. It also integrates with other AWS services,
+//  such as Lambda and DynamoDB, to enable developers to build serverless applications in the
+//  cloud. Overall, API Gateway is a powerful tool for building and managing APIs in a scalable
+//  and secure manner.
+
+//<================== 📌 5️⃣ CORS (Cross-Origin Resource Sharing) ==================>
+// CORS (Cross-Origin Resource Sharing) is a security feature implemented by web browsers
+// to restrict web pages from making requests to a different domain than the one that
+// served the web page. CORS is implemented using HTTP headers that allow servers to
+// specify which origins are allowed to access their resources. In AWS, you can configure
+// CORS settings for services such as S3 and API Gateway to control access to your resources
+// from different origins. This is important for ensuring the security of your applications
+// while allowing legitimate cross-origin requests to access your resources when necessary.
+
+//<================== 📌 6️⃣ IAM (Identity and Access Management) ==================>
+// IAM (Identity and Access Management) is a web service provided by Amazon Web Services (AWS)
+//  that helps users securely control access to AWS resources. It allows users to create and 
+// manage users, groups, and roles, as well as define permissions for each user or group. 
+// IAM provides fine-grained control over who can access which resources and what actions they 
+// can perform on those resources. This is essential for maintaining the security and 
+// compliance of your AWS environment.
+
+//<================== 📌 7️⃣ CloudWatch ==================>
+// CloudWatch is a monitoring and observability service provided by Amazon Web Services (AWS)
+// that allows users to collect and track metrics, collect and monitor log files, and set
+// alarms. CloudWatch provides insights into the performance and health of AWS resources and
+// applications, allowing users to identify and troubleshoot issues quickly. It can be used to
+// monitor resources such as EC2 instances, Lambda functions, and API Gateway, as well as
+// custom metrics and logs generated by applications. CloudWatch also integrates with other AWS
+// services, such as SNS and SQS, to enable users to automate responses to specific events or
+// alarms. Overall, CloudWatch is a powerful tool for monitoring and managing the performance and
+// health of your AWS environment.
+
