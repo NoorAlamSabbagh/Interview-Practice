@@ -38,10 +38,10 @@
 
 //<================== 📌 6️⃣ IAM (Identity and Access Management) ==================>
 // IAM (Identity and Access Management) is a web service provided by Amazon Web Services (AWS)
-//  that helps users securely control access to AWS resources. It allows users to create and 
-// manage users, groups, and roles, as well as define permissions for each user or group. 
-// IAM provides fine-grained control over who can access which resources and what actions they 
-// can perform on those resources. This is essential for maintaining the security and 
+//  that helps users securely control access to AWS resources. It allows users to create and
+// manage users, groups, and roles, as well as define permissions for each user or group.
+// IAM provides fine-grained control over who can access which resources and what actions they
+// can perform on those resources. This is essential for maintaining the security and
 // compliance of your AWS environment.
 
 //<================== 📌 7️⃣ CloudWatch ==================>
@@ -54,4 +54,3 @@
 // services, such as SNS and SQS, to enable users to automate responses to specific events or
 // alarms. Overall, CloudWatch is a powerful tool for monitoring and managing the performance and
 // health of your AWS environment.
-
